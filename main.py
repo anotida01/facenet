@@ -1,13 +1,14 @@
 import os
 import CV_Detect
 import cv2
-if not os.getcwd() == '/home/anotida/PycharmProjects/FacialRecognition':
-    os.chdir('/home/anotida/PycharmProjects/FacialRecognition')
+if not os.getcwd() == '/home/anotidaishe/PycharmProjects/facenet':
+    os.chdir('/home/anotidaishe/PycharmProjects/facenet')
 from DataProcessing import Saver
 from Classifier import TRAIN
 import time
 from Facenet import real_time_recognition
 
+PATH = os.getcwd() + '/'
 # TODO: Adding photos for existing person needs to work
 
 
@@ -60,7 +61,8 @@ def get_num_photos():
 
 def view_entire_database():
     print('--Entire Database--')
-    os.system('cat /home/anotida/PycharmProjects/FacialRecognition/People/People.txt')
+    people_dir = PATH + 'People/People.txt'
+    os.system('cat {}'.format(people_dir))
 
 
 def classify_single_image():

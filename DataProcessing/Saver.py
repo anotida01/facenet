@@ -133,7 +133,6 @@ def get_names():
     return names
 
 
-
 def update_all_photo_nums():
 
     for person in file_list:
@@ -146,3 +145,5 @@ if __name__ == 'DataProcessing.Saver':
 
     person_file = open(PATH + '/People/People.txt', 'r+')
     file_list = person_file.readlines()
+
+
